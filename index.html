@@ -7,24 +7,28 @@
     <title>Simulador Likes</title>
 </head>
 <body>
-<form>
+<form id="formulario">
 <div class="container">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Título de la Publicación</label>
     <input type="text" class="form-control" id="titulo" aria-describedby="Título">
-    <div id="emailHelp" class="form-text">Ingresa el texto que quieras ver en tu Publicación</div>
+    <div class="form-text">Ingresa el texto que quieras ver en tu Publicación</div>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Descripción</label>
-    <input type="text" class="form-control" id="Descripçión" aria-describedby="Descripción">
-    <div id="emailHelp" class="form-text">Cuéntanos de qué trata tu Publicación</div>
+    <input type="text" class="form-control" id="descripcion" aria-describedby="Descripción">
+    <div class="form-text">Cuéntanos de qué trata tu Publicación</div>
   </div>
-    <div class="mb-3">
+  <div class="mb-3">
     <label for="archivo" class="form-label">Subir archivo</label>
-    <input class="form-control" type="file" id="archivo">
+    <input id="imagen" class="form-control" type="file" id="archivo">
   </div>
-  <button type="submit" class="btn btn-primary">Agregar</button>
+  <button id="botonPublicar" type="button" class="btn btn-primary">Publicar</button>
 </form>
 </div>
+
+<h3 class="mb-3">TUS PUBLICACIONES</h3>
+<div id="publicaciones" class="row g-4"></div>
+<script src="script.js"></script>
 </body>
 </html>
