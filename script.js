@@ -18,11 +18,21 @@ botonparapublicar.addEventListener("click", function(){
                 <h2 class="card-title">${titulo}</h2>
                 <h5 class="card-text">${descripcion}</h5>
             </div>
-        <img src="${imagenURL}" class="img-fluid w-75">
+        <img src="${imagenURL}" class="">
+        <button id="meGusta" type="button" class="btn btn-primary btnMeGusta">Me Gusta 👍🏻</button>
+        <span class="ms-2 contador">0 Me Gusta</span>
         </div>
     `;
 
     publicaciones.prepend(card);
 
-    formulario.reset(); // limpia el formulario
+const botonMeGusta = card.querySelector(".btnMeGusta");
+const cont = card.querySelector(".contador");
+
+botonMeGusta.addEventListener("click",function(){
+    let cantidad = parseInt(cont.textContent)
+    cont.textContent = (cantidad+1)+" Me gusta"
 });
+});
+    formulario.reset(); // limpia el formulario
+
