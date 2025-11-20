@@ -19,8 +19,9 @@ botonparapublicar.addEventListener("click", function(){
                 <h5 class="card-text">${descripcion}</h5>
             </div>
         <img src="${imagenURL}" class="">
-        <button id="meGusta" type="button" class="btn btn-primary btnMeGusta">Me Gusta 👍🏻</button>
-        <span class="ms-2 contador">0 Me Gusta</span>
+        <button id="meGusta" type="button" class="btnMeGusta">
+        <span class="bi-heart"></span>
+        <span class="ms-2 contador">0 Me Gusta</span></button>
         </div>
     `;
 
@@ -28,11 +29,17 @@ botonparapublicar.addEventListener("click", function(){
 
 const botonMeGusta = card.querySelector(".btnMeGusta");
 const cont = card.querySelector(".contador");
+const icono = card.querySelector(".bi-heart");
 
 botonMeGusta.addEventListener("click",function(){
     let cantidad = parseInt(cont.textContent)
     cont.textContent = (cantidad+1)+" Me gusta"
+    icono.classList.remove("bi-heart");
+    icono.classList.add("bi-heart-fill");
+    icono.style.color="red";
 });
 });
-    formulario.reset(); // limpia el formulario
+    
+
+formulario.reset();
 
